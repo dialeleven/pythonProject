@@ -1,5 +1,5 @@
-name = 'Lucas'
-print('L' in name)
+name = 'Jimmuy'
+print('J' in name)
 
 if (True)
    print('this is true')
