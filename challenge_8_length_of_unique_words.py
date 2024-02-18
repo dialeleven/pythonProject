@@ -45,3 +45,12 @@ mylist = ["apple", "banana", "cherry"]
 print(mylist)
 mylist += ["pear"]
 print(mylist)
+
+myindex = ''
+
+try:
+    myindex = mylist.index('banana')
+except ValueError:
+    print('')
+
+print(f'myindex: {myindex}')
