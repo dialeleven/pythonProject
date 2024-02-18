@@ -22,35 +22,53 @@ def set_operation(sent1,sent2):
     
     # YOUR CODE GOES HERE
     unique_word_count = 0
+    i = 0
+    unique_words = []
 
-    # split string based on space
+    # split sentence string based on space separator (default)
     sent1_split = sent1.split()
     print(sent1_split)
 
     # loop through each word in the sentence
-    for i in sent1_split:
-        # unique word counter
-        unique_word_count += 1
+    for current_word in sent1_split:
+        #print(f"\n*** Current word being processed is '{current_word}' ***".upper())
+
+        try:
+            # check if current word in our unique_words list
+            current_word_is_duplicate = current_word in unique_words
+            
+            # on first iteration, our first word will be considered unique
+            if i == 0:
+                unique_words = [current_word]
+                unique_word_count += 1
+                print(f"Current word '{current_word}' appears to be unique. i = {i}")
+            # current word is not found (True/False for "in") in our list of unique words, so it's unique
+            elif current_word_is_duplicate == False:
+                print(f"Current word '{current_word}. current_word_is_found = {current_word_is_duplicate}. ' .  i = {i}")
+                
+                # add it to our list of unique words
+                unique_words += [current_word]
+
+                # increment total unique word counter
+                unique_word_count += 1
+
+        # word was found in list already, so don't count it as a unique word
+        except ValueError:
+            print('***ValueError*** Hey {word} is unique, so let us keep track of it?')
 
         # keep track of our unique words
         #unique_words
-        print(i)
+        print(current_word)
 
+        i += 1
+    
+    print('Unique word count for sentence 1 is:', unique_word_count)
+    print(f'Sentence 1 is: {sent1}')
+    print(f'Sentence 1 unique words are: {unique_words}')
+    
 
-set_operation("hello world hello", "more and more data will be passively collected")
-#set_operation("in data analysis we use data and process it further to create better interpreted data", "more and more data will be passively collected")
+sentence1 = "hello world hello how are you"
+sentence2 = "more and more data will be passively collected"
 
-print('============')
-mylist = ["apple", "banana", "cherry"]
-print(mylist)
-mylist += ["pear"]
-print(mylist)
-
-myindex = ''
-
-try:
-    myindex = mylist.index('banana')
-except ValueError:
-    print('')
-
-print(f'myindex: {myindex}')
+#set_operation(sentence1, sentence2)
+set_operation("in data analysis we use data and process it further to create better interpreted data", "more and more data will be passively collected")
