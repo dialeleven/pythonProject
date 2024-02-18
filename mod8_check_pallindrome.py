@@ -20,22 +20,3 @@ if (text == reversed_string):
     print(f"Your word \"{text}\" spelled backwards is \"{reversed_string}\" which is a PALLINDROME!")
 else:
     print(f"Sorry, your word \"{text}\" spelled backwards is \"{reversed_string}\" which is NOT a pallindrome.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-for i in text:
-   # check if letter is a vowel
-   if "a" in i or "e" in i or "i" in i or "o" in i or "u" in i:
-      print(i , end = '|')
-'''
