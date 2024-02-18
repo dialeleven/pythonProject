@@ -44,7 +44,7 @@ def set_operation(sent1,sent2):
                 print(f"Current word '{current_word}' appears to be unique. i = {i}")
             # current word is not found (True/False for "in") in our list of unique words, so it's unique
             elif current_word_is_duplicate == False:
-                print(f"Current word '{current_word}. current_word_is_found = {current_word_is_duplicate}. ' .  i = {i}")
+                print(f"Current word '{current_word}. current_word_is_duplicate = {current_word_is_duplicate}. ' .  i = {i}")
                 
                 # add it to our list of unique words
                 unique_words += [current_word]
