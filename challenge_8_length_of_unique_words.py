@@ -21,16 +21,32 @@ def set_operation(sent1,sent2):
          output:return the sum of length of unique words.'''
     
     # YOUR CODE GOES HERE
+    # initialize some vars to avoid errors below
     unique_word_count = 0
     i = 0
     unique_words = []
 
+    # store both sentences in list for iteration
+    my_sentences = [sent1, sent2]
+    
+    # loop through both sentences
+    for one_sentence in my_sentences:
+        print(f"Sentence: {one_sentence}")
+        
+        # split sentence string based on space separator (default)
+        sentence_split_words = one_sentence.split()
+        print(sentence_split_words)
+
+
+
+
     # split sentence string based on space separator (default)
-    sent1_split = sent1.split()
-    print(sent1_split)
+    sentence_split_words = sent1.split()
+    print(sentence_split_words)
+
 
     # loop through each word in the sentence
-    for current_word in sent1_split:
+    for current_word in sentence_split_words:
         #print(f"\n*** Current word being processed is '{current_word}' ***".upper())
 
         try:
