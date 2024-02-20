@@ -14,3 +14,6 @@ print ( fruits.count("cherry") )
 
 try:
     print (fruits.index('appleZZZ'))
+except ValueError:
+    pass
+    #print('not in the list!')

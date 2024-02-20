@@ -81,6 +81,7 @@ def set_operation(sent1, sent2):
                     
             # word was found in list already, so don't count it as a unique word
             except ValueError:
+                pass
                 print('***ValueError*** Hey {current_word} is unique, so let us keep track of it?!?')
         # /end for
         
