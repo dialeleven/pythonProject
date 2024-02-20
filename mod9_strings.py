@@ -61,3 +61,12 @@ fruits.remove('cherry')
 fruits.remove('cherry')
 print(fruits)
 fruits.sort(reverse=True)
+
+players = ['Jadeja','Rahul','Rohit']
+#players[len(players):] = ['Dhoni', 'Virat']
+players+=['Dhoni', 'Virat']
+print(players)
+
+players = ['Jadeja','Rahul','Rohit']
+players[len(players):] = ['Dhoni', 'Virat']
+print(players)
