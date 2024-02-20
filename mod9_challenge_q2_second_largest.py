@@ -45,9 +45,45 @@ class Solution:
     # @param A : list of integers
     # @return an integer
     def solve(self, A):
-        print('Hello world!')
+        # reverse sort list (largest to smallest)
+        A.sort(reverse=True)
 
+        # total number of elements in list
+        total_elements = len(A)
+        
+        # get largest number in list
+        largest_num = A[0]
+
+        # total number of largest number in list
+        largest_num_count = A.count(largest_num)
+
+        # only one element, so there's no 2nd largest element/number
+        if total_elements == 1:
+            return -1
+        # Handle cases where A is like [2, 2] or [2, 2, 2] where it's the same number multiple times; naughty naughty.
+        elif largest_num_count == total_elements:
+            return -1
+        else:
+            #print(A)
+            #print(f'largest_num = {largest_num} and occurs {largest_num_count} time(s)')
+
+            # Loop through N times the number of occurrences of the largest number (e.g. [2, 1, 2, 2] we have 3 occurrences of "2").
+            # Pop off the first element until the largest number is gone
+            for i in range(largest_num_count):
+                #print(f'hello i = {i}')
+                A.pop(0)
+            
+            _2nd_largest_num = A[0]
+
+            return _2nd_largest_num
 
 
 integer_array = [2, 1, 2]
-Solution.solve(None, integer_array)
+integer_array = [2, 1, 99, 3, 7, 100]
+#integer_array = [2, 2, 2]
+#integer_array = [2]
+
+# get the 2nd largest number in the list
+return_val = Solution.solve(None, integer_array)
+
+print(return_val)

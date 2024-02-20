@@ -42,3 +42,22 @@ for i in combined_lists:
 
 print(combined_lists[0][1])
     #print(i)
+
+print(fruits)
+print(len(fruits))
+
+mylist = ["a", "b", "a", "c", "c"]
+print(mylist)
+mylist = list(dict.fromkeys(mylist))
+print(mylist)
+print()
+print()
+
+
+fruits = ['apple', 'cherry', 'banana', 'cherry']
+print(fruits)
+print ( fruits.count("cherry") )
+fruits.remove('cherry')
+fruits.remove('cherry')
+print(fruits)
+fruits.sort(reverse=True)
