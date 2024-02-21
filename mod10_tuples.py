@@ -25,4 +25,4 @@ print(type(t))
 t[0][0] = 100
 print(t)
 
-#t[0] = 'abc'
+#t[0] = 'abc' # not allowed - "TypeError: 'tuple' object does not support item assignment"
