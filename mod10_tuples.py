@@ -58,12 +58,32 @@ print(mylist)
 print(type(mylist), end = '\n\n')
 
 
-# list to tuple and tuple to list
-print(t)
-print(type(t))
-mylist = list(t)
-print(type(mylist))
+# convert tuple to list
+t = (1, 2, 3, 4)
+print('t =', t)
+print(type(t), '\n')
+t = list(t)
+print('t =', t)
+print(type(t), '\n\n')
 
+
+t = list((1, 2, 3, 4))
+print('t =', t)
+print(type(t), '\n\n')
+
+
+# convert list to tuple
 t = tuple(mylist)
 print(t)
 print(type(t))
+
+# tuple concatenation
+t = (1, 2, 3, 4)
+t1 = (5, 6)
+t2 = t + t1
+print(t2)
+
+t2 = t2 + t1
+print(t2)
+
+print(t2 * 2)
