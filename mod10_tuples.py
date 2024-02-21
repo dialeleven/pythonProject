@@ -17,3 +17,12 @@ for planet in planets:
 print('\n')
 
 print(type(planets))
+
+t = ([1, 3, 5 ,7], 'Jimbo')
+print(t)
+print(type(t))
+
+t[0][0] = 100
+print(t)
+
+#t[0] = 'abc'
