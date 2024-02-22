@@ -87,3 +87,11 @@ t2 = t2 + t1
 print(t2)
 
 print(t2 * 2)
+
+name_lst = ["Vijay", "Vickey"]
+tup = ("Item_1", 0.5, name_lst)
+name_lst.append("Vishal")
+print(tup)
+
+elements = (10, 20, 30, 40, 50, 60, 70, 80)
+print(elements[2:5], elements[:4], elements[3:100])
