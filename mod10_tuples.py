@@ -38,7 +38,7 @@ print(a)
 print(b)
 
 
-# unpacking tuple exampe
+# unpacking tuple example
 t = (1, 2, 3, 4)
 a, b, c, d = t
 print(a, b, c, d, end='\n\n')
@@ -95,3 +95,6 @@ print(tup)
 
 elements = (10, 20, 30, 40, 50, 60, 70, 80)
 print(elements[2:5], elements[:4], elements[3:100])
+
+t = (1, 2, 3, 4, 1)
+print(t)
