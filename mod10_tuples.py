@@ -98,3 +98,7 @@ print(elements[2:5], elements[:4], elements[3:100])
 
 t = (1, 2, 3, 4, 1)
 print(t)
+
+t = ([1, 3, 5 ,7], 'Jimbo')
+print( type(t), t)
+print( type(t[0]) , t[0])
