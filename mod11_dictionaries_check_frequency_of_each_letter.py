@@ -10,3 +10,5 @@ for i in name:
     print(i, end=' ')
 
 print('\n', letter_freq_dict)
+
+

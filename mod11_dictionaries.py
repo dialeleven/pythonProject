@@ -141,3 +141,31 @@ print('fruits_copy:', fruits_copy, end = '\n\n\n')
 
 d = {'r' : 1, 'r' : 3, 'r' : 10}
 print(d['r'])
+
+
+dict1 = {'age': 35, 'name': 'abc', 'salary': 45000}
+
+val = dict1['age']
+
+#print(val)
+
+if 'age' in dict1:
+    print('This is a member of the dictionary')
+else:
+    print('This is not a member of the dictionary')
+
+# Changing Attributes
+# Which of the following is the correct way of changing the ‘salary’ of ‘smit’ to 8500?
+freshers = {
+    'student1': {'name': 'yash', 'salary': 7500},
+    'student2': {'name': 'heet', 'salary': 8000},
+    'student3': {'name':'smit', 'salary': 6500}
+}
+
+print(freshers)
+freshers['student3']['salary'] = 8500
+print(freshers)
+
+bbt = {'Sheldon': 1, 'Leonard': 2}
+bbt.update({'Penny': 2})
+print(bbt)
