@@ -4,6 +4,7 @@ def returnSum(dict):
     # PRINT THE SUM OF VALUES
     # YOUR CODE GOES HERE
     for key in dict:
+        # add up all the values in the dictionary
         sum += dict[key]
     
     print(sum)
