@@ -13,8 +13,8 @@ fruits = {
     'banana' : 90
 }
 
-for fruit in fruits:
-    print(fruit)
+for key in fruits:
+    print(key, ':', fruits[key])
 print(fruits , end = '\n===========\n\n')
 
 
