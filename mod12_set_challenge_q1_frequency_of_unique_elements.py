@@ -10,7 +10,7 @@ def unique_count(tup):
     #print(tup)
 
     for item in tup:
-        # convert each item to a string for processing in case some db throws in something like a list (ok smart guy)
+        # convert each item to a string for processing in case item is a list and not an integer value only (ok smart guy)
         item = str(item)
         
         # item (number) exists already in our dictionary, so check the counter (value) for the current key
