@@ -41,7 +41,9 @@ unique_count( tup = (1,2,3,2, "Hello", [4,8,16], "Hello") )
 #unique_count( tup = (10, 8, 10, 15, 10, 2) ) 
 
 '''
+============================
 Frequency of unique elements
+https://www.scaler.com/topics/course/python-for-beginners/challenge/377705/challenge/?mode=read
 ============================
 
 Problem Description:
