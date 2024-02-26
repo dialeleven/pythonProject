@@ -59,3 +59,18 @@ print(x(5))
 y = lambda a, b : a + b
 print(y(3, 4))
 
+
+# function to return the larger of two numbers
+def larger(a, b):
+   if a > b:
+        return a
+   else:
+      return b
+   
+print(larger(43, 5))
+
+
+# lambda version to return the larger of two numbers
+z = lambda x, y : x if x > y else y
+print(z(50, 100))
+print(z(25, 10))
