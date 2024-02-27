@@ -98,3 +98,31 @@ print(lst)
 lst.sort(key = lambda x : x[1])
 print(lst)
 # >>> [(5, 3), (2, 4), (12, 56)]
+
+
+def mix(a, b, c, age = 25, *arg, **kwargs):
+    print(a, b, c)
+    print(age)
+    print(arg)
+    print(kwargs)
+
+mix(2, 4, 6, 45, 10, 12, 14, name='Sally', hobby = 'Swimming')
+
+
+def convert(t):
+    return t*9/5 + 32
+
+print(convert(20))
+
+def fun1(name, age):
+   print(name, age)
+
+fun1("Mohit", age=23)
+fun1(age = 23, name="Mohit")
+#fun1(name="Mohit", 23)
+fun1(23, "Mohit")
+
+def Interest(p,c,t=2,r=0.09):
+  return p*t*r
+
+print(Interest(c=4,r=0.12,p=5000))
