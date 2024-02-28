@@ -116,6 +116,6 @@ The first argument will be integer A, which denotes the recovered cases in a day
 The second argument will be integer B, which denotes the new cases in a day.
 The third argument will be integer C, which denotes the currently active cases.
 '''
-#print ( Solution.solve(None, A = 5, B = 3, C = 1) ) # output = 1
-#print ( Solution.solve(None, A = 4, B = 3, C = 2) ) # output = 2
+print ( Solution.solve(None, A = 5, B = 3, C = 1) ) # output = 1
+print ( Solution.solve(None, A = 4, B = 3, C = 2) ) # output = 2
 print ( Solution.solve(None, A = 50, B = 49, C = 8) ) # output = 8
