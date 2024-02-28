@@ -77,39 +77,30 @@ class Solution:
     # @param C : integer
     # @return an integer
     def solve(self, A, B, C):
-        recovered_cases_per_day = A
-        new_cases_per_day = B
+        recovered_cases = A
+        new_cases = B
         active_cases = C
 
         # Calculate the difference between recovered cases and new cases per day
-        diff = recovered_cases_per_day - new_cases_per_day
+        diff = recovered_cases - new_cases
 
         # Check if the number of recovered cases is less than or equal to the number of new cases
         if (diff <= 0):
+            print('diff =', diff, 'for recovered_cases (', recovered_cases, ') - new_cases (', new_cases, ') --- active_cases =', active_cases)
             # If so, it will take only one day for active cases to reach zero
             return 1
         
-        # Calculate the number of days required to reach zero cases
+        # Calculate the number of days required to reach zero cases (active cases + number of cases left after recovery)
         days = (active_cases + diff - 1) // diff
         
         return days
 
 
-
+'''
+The first argument will be integer A, which denotes the recovered cases in a day.
+The second argument will be integer B, which denotes the new cases in a day.
+The third argument will be integer C, which denotes the currently active cases.
+'''
 print ( Solution.solve(None, A = 5, B = 3, C = 1) ) # output = 1
 print ( Solution.solve(None, A = 4, B = 3, C = 2) ) # output = 2
 print ( Solution.solve(None, A = 50, B = 49, C = 8) ) # output = 8
-print ( Solution.solve(None, A = 5, B = 5, C = 1) ) # output = 1
-
-
-'''
-Your submission failed for the following input:
-A : 50
-B : 49
-C : 8
-
-The expected return value:
-8
-Your function returned the following:
-2
-'''
