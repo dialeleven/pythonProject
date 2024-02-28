@@ -88,7 +88,7 @@ class Solution:
         # total cases after recovery
         cases_after_recovery = total_cases - recovered_cases
 
-        # if we have zero cases or a negative number of cases (e.g. cases_after_recovery > total_cases - recovered_cases)
+        # if we have zero cases or a negative number of cases after recovery, then only 1 day is needed
         if cases_after_recovery <= 0:
             return 1
         
