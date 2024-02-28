@@ -77,8 +77,12 @@ class Solution:
     # @param C : integer
     # @return an integer
     def solve(self, A, B, C):
+        recovered_cases_per_day = A
+        new_cases_per_day = B
+        active_cases = C
+
         # Calculate the difference between recovered cases and new cases per day
-        diff = A - B
+        diff = recovered_cases_per_day - new_cases_per_day
 
         # Check if the number of recovered cases is less than or equal to the number of new cases
         if (diff <= 0):
@@ -86,7 +90,7 @@ class Solution:
             return 1
         
         # Calculate the number of days required to reach zero cases
-        days = (C + diff - 1) // diff
+        days = (active_cases + diff - 1) // diff
         
         return days
 
