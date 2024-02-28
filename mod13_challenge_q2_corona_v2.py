@@ -98,7 +98,7 @@ class Solution:
             total_cases = new_cases + active_cases
 
             # total cases after recovery
-            cases_after_recovery = active_cases = total_cases - recovered_cases
+            active_cases = total_cases - recovered_cases
 
             # increment the total number of days
             days += 1
