@@ -1,3 +1,16 @@
+'''
+OOP basics.
+
+Creating the following:
+- classes: e.g. Car, Human
+- objects: e.g. myhuman = Human('Sally', 35, 'Yoga')
+- constructor: __init__
+- attributes: e.g. self.name
+- methods: e.g. greet()
+- class variables: e.g. population
+- instance variables: e.g. myhuman.name
+- calling class methods - e.g. myhuman.greet()
+'''
 class Car:
     pass
 
