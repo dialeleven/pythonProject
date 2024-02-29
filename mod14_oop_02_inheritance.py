@@ -85,7 +85,7 @@ print('Human.population =', Human.population)
 class Employee(Human):
     pass
 
-# create object from child class "Employee" from the parent "Human" class
+# create object from child class "Employee" derived from parent "Human" class
 employee1 = Employee('Steve Jobs', 50)
 print('Human.population =', Human.population)
 
