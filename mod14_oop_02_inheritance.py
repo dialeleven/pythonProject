@@ -1,10 +1,6 @@
-class Car:
-    pass
-
-honda = Car()
-print(type(honda))
-
-
+'''
+Working with the Human class for inheritance
+'''
 class Human:
     # class variables
     population = 0
