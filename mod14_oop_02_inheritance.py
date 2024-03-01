@@ -66,6 +66,11 @@ class Employee(Human):
         self.company = company
         self.position = position
     
+    # The __str__() function controls what should be returned when the class object is represented as a string.
+    # If the __str__() function is not set, the string representation of the object is returned.
+    def __str__(self):
+        return f'{self.name}|{self.age}|{self.company}|{self.position}'
+    
     # add some attributes
     def hire(self, person):
         print(f'{person} has been hired in our company')
@@ -124,6 +129,23 @@ print('population =', Human.population)
 employee2.dead()
 print('population =', Human.population)
 
+# print the employee1 object as a string (we use the __str__() function to customize the output)
+print(employee1)
+
+# modify the property on the object
+employee1.age = 55
+print(employee1)
+
+# delete a property on the object - printing the property (age) will result in an error after
+#del employee1.age
+#print(employee1)
+
 # employee has left the company
 employee1.leaveCompany()
 print('population =', myhuman.population)
+
+# delete an object
+#del employee1
+
+print('myhuman.data =', myhuman.data)
+print(employee1)
