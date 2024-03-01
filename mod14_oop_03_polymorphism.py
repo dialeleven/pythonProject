@@ -12,6 +12,25 @@ Polymorphism in Python
             - Cow object can call makeSound() to make a 'moo' sound
             - Cat object can call makeSound() to make a 'meow' sound
 
+            
+More...
+
+The word "polymorphism" means "many forms", and in programming it refers to 
+methods/functions/operators with the same name that can be executed on many 
+objects or classes. (https://www.w3schools.com/python/python_polymorphism.asp)
+
+An example of a Python function that can be used on different objects is the len() function.
+
+For strings len() returns the number of characters:
+
+    x = "Hello World!"
+    print(len(x))
+    >>> 12
+
+For tuples len() returns the number of items in the tuple:
+    mytuple = ("apple", "banana", "cherry")
+    print(len(mytuple))
+    >>> 3
 '''
 class Human:
     # class variables
