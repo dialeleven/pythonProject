@@ -41,55 +41,89 @@ class Human:
             print(self.name, 'is now more now.')
             Human.population -= 1
             self.alive = False
+            Human.data.remove(self.name)
         else:
             print('This person has already passed')
     
     def child(self, number):
         Human.population += number
 
+
+# Inheritance:
+# Human is base (or parent) class
+# Employee is derived (or child/extended) class
+class Employee(Human):
+    # re-initiate constructor (NOTE: This will NOT call the 'Human' constructor
+    # which is why we have 'name' and 'age' as a parameter. Try it without
+    # including 'name' and 'age' in the __init__ using the code:
+    #    employee1 = Employee('Apple', 'CEO')
+    # You will get "NameError: name 'name' is not defined."
+    def __init__(self, name, age, company, position):
+        # this will inherit the attributes 'name' and 'age' from 'Human' class
+        super().__init__(name, age)
+
+        # attribute for employee class
+        self.company = company
+        self.position = position
+    
+    # add some attributes
+    def hire(self, person):
+        print(f'{person} has been hired in our company')
+        Human.data.append(person)
+        Human.population += 1
+
+    # another method to test out
+    def leaveCompany(self):
+        print(f'{self.name} has left the company')
+        Human.population -= 1
+        Human.data.remove(self.name)
+
 # create instance of Human object
 myhuman = Human('Sally', 35, 'Yoga')
 
 # print attributes
 print(myhuman.name)
-print(myhuman.age)
 
 # call greet() method of Human class
 myhuman.greet()
 
-
-# print value of class variable
-print('myhuman.population =', myhuman.population)
-
-
 # create another Human object instance
 myhuman2 = Human('Bob', 40, 'Fitness')
-print('myhuman.population =', myhuman.population)
 
-# print list of humans
+print('population =', myhuman.population)
 print('myhuman.data =', myhuman.data)
 
-
-print('Human.population =', Human.population)
+# hmm why use the 'Human' class name instead of the object 'myhuman'???
+print('population =', Human.population)
 myhuman.dead()
-print('Human.population =', Human.population)
+print('population =', Human.population)
 
-myhuman3 = Human('Adam', 25)
-print('Human.population =', Human.population)
-
-myhuman.child(2)
-print('Human.population =', Human.population)
-
-
-# Inheritance
-class Employee(Human):
-    pass
 
 # create object from child class "Employee" derived from parent "Human" class
-employee1 = Employee('Steve Jobs', 50)
-print('Human.population =', Human.population)
+employee1 = Employee('Steve Jobs', 50, 'Apple', 'CEO')
 
 employee1.greet()
+print('population =', Human.population)
 
 # print list of humans
 print('myhuman.data =', myhuman.data)
+
+# call 'Employee' method 'hire'
+employee1.hire('Joe Employee')
+
+
+print('population =', Human.population)
+
+# print list of humans
+print('myhuman.data =', myhuman.data)
+
+employee2 = Employee('Employee 2', 70, 'XYZ', 'Worker')
+print('population =', Human.population)
+
+# call dead() method from 'Human' class
+employee2.dead()
+print('population =', Human.population)
+
+# employee has left the company
+employee1.leaveCompany()
+print('population =', myhuman.population)
