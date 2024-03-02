@@ -13,3 +13,8 @@ f = open('mod15_text.txt', 'w')
 
 # this will return a number indiciating the length of the string written to the file
 f.write('Writing to file again')
+
+# close file handle to prevent memory leaks
+f.close()
+
+
