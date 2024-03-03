@@ -6,7 +6,3 @@ with open('mod15_textnew.txt', 'w') as f:
 with open('mod15_textnew.txt', 'w') as f:
     f.write('This is updated content now.\n')
     f.write('More strings on another line.\n')
-
-
-with open('mod15_textnew.txt', 'a') as f:
-    f.write('Appending a line to an existing file.')
