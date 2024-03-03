@@ -1,3 +1,2 @@
-This is updated content now.
-More strings on another line.
+Let us try another file now
 Appending a line to an existing file.
