@@ -58,7 +58,13 @@ sql = '''SELECT a.id, email, type
 
 mycursor = mydb.cursor()
 mycursor.execute(sql)
+
+# return all rows
 result = mycursor.fetchall()
+
+# return only ONE row
+#result = mycursor.fetchone()
+
 
 for x in result:
     print(x)
